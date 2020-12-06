@@ -3,9 +3,9 @@ CFLAGS = -g -Wall -std=c99
 CCLINK = $(CC)
 OBJS   = main.o file0.o file1.o file2.o file3.o file4.o
 EXEC = prog.exe
-RM = rm -rf *.o *.exeS
+RM = rm -rf *.o *.exe
 
-$(EXEC): $(OBJ)
+$(EXEC): $(OBJS)
 	$(CCLINK) $(OBJS) -o $(EXEC)
 
 file0.o: file0.c file0.h file1.h file2.h
